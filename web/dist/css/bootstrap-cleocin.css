@@ -1,0 +1,168 @@
+/* 
+This bootstrp.css is customed by cleoicn.
+*/
+/*header logo*/
+
+#header #logo_a{
+	padding-top:10px;
+}
+
+#header #logo {
+	font-size:25px;
+	border-style: solid;
+	border-width: 0px 0px 7px;
+	-moz-border-image: url(../img/kaist_logo_bottom.png) 0 0 8 repeat stretch;
+	-webkit-border-image: url(../img/kaist_logo_bottom.png) 0 0 8 repeat stretch;
+	-o-border-image: url(../img/kaist_logo_bottom.png) 0 0 8 repeat stretch;
+	border-image: url(../img/kaist_logo_bottom.png) 0 0 8 fill repeat stretch;
+}
+/*button custom*/
+
+#input_price_btn{
+	margin-left: 5px;
+}
+#charge-btn ~ ul button{
+	margin-left: 5px;
+}
+#charge-btn ~ ul button[class="btn btn-block btn-info btn-xs"]{
+	margin-left: 0;
+}
+
+/*charge bar */
+.cstm-progress {
+    height: 30px;
+    margin-bottom:5px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.cstm-progress-bar-empty {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    color: #666;
+    text-align: center;
+}
+
+.cstm-progress-bar-danger {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #d9534f;
+}
+
+.cstm-progress-bar-warning {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #f0ad4e;
+}
+
+.cstm-progress-bar-nomal {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+}
+
+.cstm-progress-bar-success {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #5cb85c;
+/*  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease; */
+}
+
+.charge-control-menu {
+    display: inline;
+    float: left;
+    padding-bottom: 15px;
+    padding-top: 24px;
+    text-align: left;
+    width: 100%;
+}
+
+/*elec-station-list*/
+.elec-box {
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.elec-box>.elec-inner {
+    padding: 10px;
+    background-position:50% 50%;
+    background-size: 100% auto;
+    opacity:0.8;
+}
+
+.elec-box>.elec-inner>h3 {
+	color:rgba(0,0,0,1);
+    margin: 15px;
+    font-weight: bold;
+	text-shadow:1px 1px 1px white;
+}
+.elec-box>.elec-inner>p {
+	color:rgba(0,0,0,1);
+    text-align: right;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow:2px 3px 3px white;
+}
+.elec-box>.elec-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    display: block;
+    z-index: 10;
+    background: rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+/*start custom response style*/
+@media(max-width:1199px ){
+
+}
+
+@media(max-width:991px ){
+
+}
+@media(max-width:767px ){
+
+}
+@media(max-width:480px ){
+
+}
+@media(max-width:360px ){
+
+}
+@media(max-width:320px ){
+
+}

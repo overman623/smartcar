@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.member">
+ 
+	<select id="selectLogin" parameterType="map" resultType="dto.MemDTO">
+		select *
+		from members where email=#{email} and pwd=#{pwd}
+	</select>
+
+	<select id="selectAll" resultType="dto.MemDTO">
+		select * from members
+	</select>
+
+<!--
+	<select id="selectById" parameterType="string" resultType="dto.MemDTO">
+		select
+		* from members where userid = #{aa}
+	</select>
+
+	<insert id="insertMem" parameterType="dto.MemDTO">
+		insert into members (mno, email, pwd, mname, cre_date,mod_date)
+		values (seq_mno.nextval, #{email}, #{pwd}, #{mname}, sysdate, sysdate)
+	</insert>
+
+	<update id="updateUser" parameterType="dto.MemDTO">
+		update userinfo
+		set
+		username = #{username},
+		userpwd = #{userpwd},
+		phone = #{phone},
+		email =
+		#{email},
+		point = #{point}
+		where userid = #{userid}
+	</update>
+
+	<delete id="deleteUser" parameterType="string">
+		delete from members
+		where
+		mno = #{mno}
+	</delete>
+ -->
+</mapper>

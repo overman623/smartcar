@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<decorators defaultdir="/layout">
+    <decorator name="main" page="mainFrame.jsp">
+        <pattern>/main.do</pattern>
+    </decorator>
+
+    <decorator name="stationsInfo" page="stationsInfoFrame.jsp">
+        <pattern>/stationsinfo.do</pattern>
+    </decorator>
+    
+    <decorator name="chargeHistory" page="chargeHistoryFrame.jsp">
+        <pattern>/chargehistory.do</pattern>
+    </decorator>
+
+    <decorator name="infoPrice" page="infoPriceFrame.jsp">
+        <pattern>/infoprice.do</pattern>
+    </decorator>
+    
+    <decorator name="inputCar" page="inputCarFrame.jsp">
+        <pattern>/inputcar.do</pattern>
+    </decorator>
+    
+    <decorator name="inputStation" page="inputStationFrame.jsp">
+        <pattern>/inputstation.do</pattern>
+    </decorator>   
+     
+    <excludes>
+      <pattern>/login.do</pattern>
+    </excludes>
+    
+    <decorator name="printable" page="printable.jsp"/>
+</decorators>
