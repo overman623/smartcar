@@ -15,7 +15,6 @@ public class StationsInfoController implements ControllerInterface {
 		StationsInfoService service = StationsInfoService.getStationsInfoService();
 		List<Object> list = service.get();
 		bag.put("data", list);
-			
 		return "stationsinfo.jsp";
 	}
 

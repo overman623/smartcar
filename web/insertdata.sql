@@ -1,4 +1,10 @@
-SELECT * FROM stationsInfo;
+SELECT * FROM stationsInfo rownum between 5,10 order by sn;
+
+SELECT ii.*
+FROM (SELECT i.*, row_number() over (ORDER BY 1) as num
+              FROM stationsInfo i) ii
+WHERE num between 0 and 10;
+
 
 DROP TABLE chargeHistory;
 CREATE TABLE chargeHistory (
@@ -12,7 +18,7 @@ stationName NUMBER(10) join
 );
 
 
-DROP TABLE stationsInfo
+DROP TABLE stationsInfo;
 CREATE TABLE stationsInfo (
   sn NUMBER(10) PRIMARY KEY,
   stAddress VARCHAR(250),

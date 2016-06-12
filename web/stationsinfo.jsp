@@ -16,7 +16,7 @@
   
     <!-- Main content -->
     <section class="content">
-  
+
       <!-- Small boxes (Stat box) -->
       <div class="row" id="stationsList">
 <%--       <c:forEach items="${data }" var="datarow" varStatus="count">
@@ -28,15 +28,15 @@
               <p>${datarow.stPrice}원</p>
             </div>
             <a href="#" class="elec-box-footer bg-blue">
-                      상세 보기 <i class="fa fa-arrow-circle-right"></i>
+                      상세 보기<i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
         </div><!-- ./col -->
-      </c:forEach> --%>
-        
+      </c:forEach> --%>  
       </div><!-- /.row -->
+      
       <div class="row">
-        <input type="button" value="이미지 더보기" class="btn">
+        <input class="btn col-lg-12 col-md-12 col-xs-12" type="button" value="이미지 더보기">
       </div>
     </section>
   </div>

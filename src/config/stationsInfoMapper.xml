@@ -11,7 +11,10 @@
 	</select>
 
 	<select id="selectAll" resultType="dto.StationsInfoDTO">
-		select * from stationsInfo
+		<!-- select * from stationsInfo -->
+SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, stinserttime, stupdatetime, userid
+FROM (SELECT i.*, row_number() over (ORDER BY 1) as num FROM stationsInfo i)
+WHERE num between 0 and 10 order by sn
     <!-- order by sn -->
 	</select>
 
