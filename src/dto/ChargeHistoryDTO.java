@@ -7,9 +7,13 @@ public class ChargeHistoryDTO {
 	private int price;
 	private String chargeQuantity;
 	private String chargeTime;
+	private String chargeStatus;
+	private String insertTime;
+	private String updateTime;
 	private int userId;
 	private int carName;
 	private int stationName;
+	private int orderList;
 	
 	public ChargeHistoryDTO() {
 		// TODO Auto-generated constructor stub
@@ -25,6 +29,22 @@ public class ChargeHistoryDTO {
 		this.userId = userId;
 		this.carName = carName;
 		this.stationName = stationName;
+	}
+
+	public ChargeHistoryDTO(int sn, int price, String chargeQuantity, String chargeTime, String chargeStatus,
+			String insertTime, String updateTime, int userId, int carName, int stationName, int orderList) {
+		super();
+		this.sn = sn;
+		this.price = price;
+		this.chargeQuantity = chargeQuantity;
+		this.chargeTime = chargeTime;
+		this.chargeStatus = chargeStatus;
+		this.insertTime = insertTime;
+		this.updateTime = updateTime;
+		this.userId = userId;
+		this.carName = carName;
+		this.stationName = stationName;
+		this.orderList = orderList;
 	}
 
 	public int getSn() {
@@ -59,6 +79,30 @@ public class ChargeHistoryDTO {
 		this.chargeTime = chargeTime;
 	}
 
+	public String getChargeStatus() {
+		return chargeStatus;
+	}
+
+	public void setChargeStatus(String chargeStatus) {
+		this.chargeStatus = chargeStatus;
+	}
+
+	public String getInsertTime() {
+		return insertTime;
+	}
+
+	public void setInsertTime(String insertTime) {
+		this.insertTime = insertTime;
+	}
+
+	public String getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(String updateTime) {
+		this.updateTime = updateTime;
+	}
+
 	public int getUserId() {
 		return userId;
 	}
@@ -83,12 +127,23 @@ public class ChargeHistoryDTO {
 		this.stationName = stationName;
 	}
 
+	public int getOrderList() {
+		return orderList;
+	}
+
+	public void setOrderList(int orderList) {
+		this.orderList = orderList;
+	}
+
 	@Override
 	public String toString() {
 		return "ChargeHistoryDTO [sn=" + sn + ", price=" + price + ", chargeQuantity=" + chargeQuantity
-				+ ", chargeTime=" + chargeTime + ", userId=" + userId + ", carName=" + carName + ", stationName="
-				+ stationName + "]";
+				+ ", chargeTime=" + chargeTime + ", chargeStatus=" + chargeStatus + ", insertTime=" + insertTime
+				+ ", updateTime=" + updateTime + ", userId=" + userId + ", carName=" + carName + ", stationName="
+				+ stationName + ", orderList=" + orderList + "]";
 	}
+	
+	
 	
 	
 	

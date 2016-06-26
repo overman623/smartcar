@@ -12,7 +12,6 @@ public class MainController implements ControllerInterface {
 	@Override
 	public String controlProcess(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-
 		return "main.jsp";
 	}
 

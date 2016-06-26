@@ -1,12 +1,17 @@
-SELECT * FROM stationsInfo rownum between 5,10 order by sn;
+SELECT * FROM stationsInfo;
 
-SELECT ii.*
-FROM (SELECT i.*, row_number() over (ORDER BY 1) as num
-              FROM stationsInfo i) ii
-WHERE num between 0 and 10;
+SELECT i.*, row_number() over (ORDER BY 1) as num FROM stationsInfo i;
 
+SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, stinserttime, stupdatetime, userid
+FROM (SELECT i.*, row_number() over (ORDER BY 1) as num FROM stationsInfo i)
+WHERE num between 0 and 10 order by sn;
+
+SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, stinserttime, stupdatetime, userid
+from stationsinfo
+WHERE sn between 11 and 20 order by sn;
 
 DROP TABLE chargeHistory;
+
 CREATE TABLE chargeHistory (
 sn NUMBER(10) PRIMARY KEY,
 price NUMBER(10),

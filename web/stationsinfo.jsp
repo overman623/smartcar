@@ -36,7 +36,7 @@
       </div><!-- /.row -->
       
       <div class="row">
-        <input class="btn col-lg-12 col-md-12 col-xs-12" type="button" value="이미지 더보기">
+        <input class="btn col-lg-12 col-md-12 col-xs-12" type="button" id="moreImages" value="이미지 더보기">
       </div>
     </section>
   </div>

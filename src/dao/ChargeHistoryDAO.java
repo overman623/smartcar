@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import dto.ChargeHistoryDTO;
 import frame.DAOInterface;
 import util.MybatisUtil;
 
@@ -38,16 +39,15 @@ public class ChargeHistoryDAO implements DAOInterface {
 		return result;
 	}
 
-	@Override
-	public Object select(Object obj) {
+
+	public ChargeHistoryDTO select(ChargeHistoryDTO obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public List<Object> select() {
+	public List<ChargeHistoryDTO> select() {
 		SqlSession session = null;
-		List<Object> list = null;
+		List<ChargeHistoryDTO> list = null;
 		try {
 			session = MybatisUtil.getSession();
 			list = session.selectList("com.chargehistory.selectAll");
@@ -56,12 +56,17 @@ public class ChargeHistoryDAO implements DAOInterface {
 		return list;
 	}
 
-	@Override
-	public List<Object> search(Object obj) {
+	public List<ChargeHistoryDTO> search(ChargeHistoryDTO obj) {
 		SqlSession session = MybatisUtil.getSession();
-		List<Object> list = session.selectList("com.member.selectAll");
+		List<ChargeHistoryDTO> list = session.selectList("com.member.selectAll");
 		session.close();
 		return list;
+	}
+
+	@Override
+	public int countRows() {
+
+		return 0;
 	}
 	
 

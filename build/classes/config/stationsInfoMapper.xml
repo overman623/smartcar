@@ -5,18 +5,20 @@
 
 <mapper namespace="com.stationsinfo">
  
-	<select id="selectLogin" parameterType="map" resultType="dto.MemDTO">
-		select *
-		from members where email=#{email} and pwd=#{pwd}
-	</select>
-
+  <select id="count" resultType="integer">
+  SELECT count(*) from stationsinfo
+  </select>
+ 
 	<select id="selectAll" resultType="dto.StationsInfoDTO">
-		<!-- select * from stationsInfo -->
-SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, stinserttime, stupdatetime, userid
-FROM (SELECT i.*, row_number() over (ORDER BY 1) as num FROM stationsInfo i)
-WHERE num between 0 and 10 order by sn
-    <!-- order by sn -->
+  SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, inserttime, updatetime, userid
+  from stationsinfo order by orderlist limit 0,10
 	</select>
+  
+    <select id="StationsInfoFromFirstIndexToLastIndex" parameterType="map" resultType="dto.StationsInfoDTO">
+ 
+  SELECT sn, staddress, stlat, stlng, stprice, stphoto, stname, stregistnum, stphone, inserttime, updatetime, userid
+  from stationsinfo order by orderlist limit #{firstIndex}, #{offset} 
+  </select>
 
 <!--
 	<select id="selectById" parameterType="string" resultType="dto.MemDTO">

@@ -42,12 +42,7 @@
       <decorator:body />
       
       <jsp:include page="include/footer.jsp"/>
-      
-      <jsp:include page="include/slidecontroll.jsp"/>
-      
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>      
+          
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -64,9 +59,31 @@
     <script src="dist/js/demo.js"></script>
     <!-- made new jquery -->
     <script src="dist/js/cleocin.js"></script>
+    <script src="dist/js/userJoinAndLogin.js"></script>
     <script>
       var data = ${data};
       var text = '';
+      
+      var firstIndex = 1;
+      var offset = 10;
+      
+      function test(firstNum, offset){
+        $.ajax({
+          type: 'POST',
+          url: 'stationsinfo.ajax',
+          data: { command: 'get', firstIndex: firstNum, offset: offset},
+          success: function(data) {
+            console.log(data);
+          }
+        });
+      }
+      
+      test(firstIndex, offset);
+      $('#moreImages').click(function() {
+        test(firstIndex += 10, offset);
+      });
+      
+      
       $(data).each(function(index, value){
         var sn = value['sn'];
        	var stAddress = value['stAddress'];
@@ -77,18 +94,18 @@
       	var stName = value['stName'];
       	var stRegistnum = value['stRegistnum'];
       	var stPhone = value['stPhone'];
-      	var stInsertTime = value['stInsertTime'];
-      	var stUpdateTime = value['stUpdateTime'];
+      	var stInsertTime = value['insertTime'];
+      	var stUpdateTime = value['updateTime'];
       	var userId = value['userId']; 
       	
       	text += '<div class="col-lg-3 col-xs-6" >'+
         '<!-- small box -->'+
-        '<div class="elec-box">'+
-          '<div class="elec-inner" style="background-image:url(dist/img/stations/'+stPhoto+');">'+
+        '<div class="station-box">'+
+          '<div class="station-inner" style="background-image:url(dist/img/stations/'+stPhoto+');">'+
             '<h3>'+stName+'</h3>'+
             '<p>'+stPrice+'원</p>'+
           '</div>'+
-          '<a href="#" class="elec-box-footer bg-blue">'+
+          '<a href="#" class="station-box-footer bg-blue">'+
                    ' 상세 보기 <i class="fa fa-arrow-circle-right"></i>'+
           '</a>'+
         '</div>'+

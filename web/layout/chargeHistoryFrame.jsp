@@ -38,12 +38,7 @@
     <div class="wrapper">
       <jsp:include page="include/header.jsp"/>
       <decorator:body />
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-      </footer>
+      <jsp:include page="include/footer.jsp"/>
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -61,6 +56,8 @@
     <script src="dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
+    <!-- made new jquery -->
+    <script src="dist/js/userJoinAndLogin.js"></script>
     <!-- page script -->
     <script>
       $(function () {

@@ -16,8 +16,7 @@
     </environment>
   </environments>
   <mappers>
-  
-    <mapper resource="config/userMapper.xml"/>
+    <mapper resource="config/userInfoMapper.xml"/>
     <mapper resource="config/chargeHistoryMapper.xml"/>
     <mapper resource="config/stationsInfoMapper.xml"/>
   </mappers>

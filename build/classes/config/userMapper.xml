@@ -5,14 +5,19 @@
 
 <mapper namespace="com.member">
  
-	<select id="selectLogin" parameterType="map" resultType="dto.MemDTO">
-		select *
-		from members where email=#{email} and pwd=#{pwd}
+	<select id="selectLogin" parameterType="map" resultType="dto.UserInfoDTO">
+		<!-- select *
+		from members where email=#{email} and pwd=#{pwd} -->
 	</select>
 
-	<select id="selectAll" resultType="dto.MemDTO">
-		select * from members
+	<select id="selectAll" resultType="dto.UserInfoDTO">
+		<!-- select * from members -->
 	</select>
+  
+    <insert id="insertMem" parameterType="dto.MemDTO">
+   <!--  insert into members (mno, email, pwd, mname, cre_date,mod_date)
+    values (seq_mno.nextval, #{email}, #{pwd}, #{mname}, sysdate, sysdate) -->
+    </insert>
 
 <!--
 	<select id="selectById" parameterType="string" resultType="dto.MemDTO">

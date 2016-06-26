@@ -26,6 +26,21 @@
               </form>
             </div><!-- /.navbar-collapse -->
             
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                  <li class="dropdown messages-menu">
+                    <!-- Menu toggle button -->
+                    <a href="#" data-toggle="modal" data-target="#joinModal">
+                      join
+                    </a>
+                  </li><!-- /.messages-menu -->              
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#loginModal">
+                      login
+                    </a>
+                  <li/>
+                </ul>
+              </div>
           </div><!-- /.container-fluid -->
         </nav>
       </header>

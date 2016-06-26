@@ -83,7 +83,7 @@
 
 function changeElement(before, after, content){
   var attr = new Array();
-  var checklist = [['img', 'input'],['hr', 'br']];
+  var checklist = [['img', 'input'], ['hr', 'br']];
   var tag = '';
   var attrInsert = '';
   var i=2;

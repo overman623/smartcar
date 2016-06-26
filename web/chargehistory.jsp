@@ -24,19 +24,19 @@
                 <thead>
                   <tr>
                     <th>충전시작시간</th>
-                    <th>충전량(kwh)</th>
+                    <th class="not-important-field">충전량(kwh)</th>
                     <th>가격</th>
-                    <th>차량</th>
+                    <th class="not-important-field">차량</th>
                     <th>충전소</th>
                   </tr>
                 </thead>
                 <tbody>
                 <c:forEach items="${data }" var="datarow">
                   <tr>
-                    <td>${datarow.chargeTime}</td>
-                    <td>${datarow.chargeQuantity}</td>
+                    <td>${datarow.insertTime}</td>
+                    <td class="not-important-field">${datarow.chargeQuantity}</td>
                     <td>${datarow.price}</td>
-                    <td>${datarow.carName}</td>
+                    <td class="not-important-field">${datarow.carName}</td>
                     <td>${datarow.stationName}</td>
                   </tr>
                 </c:forEach>
@@ -44,9 +44,9 @@
                 <tfoot>
                   <tr>
                     <th>충전시작시간</th>
-                    <th>충전량(kwh)</th>
+                    <th class="not-important-field">충전량(kwh)</th>
                     <th>가격</th>
-                    <th>차량</th>
+                    <th class="not-important-field">차량</th>
                     <th>충전소</th>              
                   </tr>
                 </tfoot>

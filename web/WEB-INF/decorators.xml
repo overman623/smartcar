@@ -24,9 +24,10 @@
     <decorator name="inputStation" page="inputStationFrame.jsp">
         <pattern>/inputstation.do</pattern>
     </decorator>   
-     
+
     <excludes>
-      <pattern>/login.do</pattern>
+      <pattern>/login1.do</pattern>
+      <pattern>/*.ajax</pattern>
     </excludes>
     
     <decorator name="printable" page="printable.jsp"/>

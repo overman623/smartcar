@@ -47,6 +47,9 @@
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
     <!-- SlimScroll -->
     <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
@@ -57,14 +60,19 @@
     <script src="dist/js/demo.js"></script>
     <!-- made new jquery -->
     <script src="dist/js/cleocin.js"></script>
+    <script src="dist/js/userJoinAndLogin.js"></script>
     <script>
+      $(function () {
+        $("[data-mask]").inputmask();
+      });
       $('#btn-userinfo').click(function() {
         $('#collapse').click();	
       });
-      
       $('#collapse').click(function(){
       //ajax return and input body
       });
     </script>
+
+
   </body>
 </html>
